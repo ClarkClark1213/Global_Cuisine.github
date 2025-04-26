@@ -1,0 +1,240 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family:'Poppins',sans-serif;
+}
+body{
+    background-image: url("media/backround.jpg");
+    background-color: brown;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+}
+
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    font-size: large;
+    padding: 20px 100px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2) ;
+    z-index: 999;
+    transform: translateY(0);
+    transition: .4s ease-out;
+}
+.navbar::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,transparent,rgba(255, 253, 253, 0.514),transparent);
+    transition: .3s;
+}
+
+.navbar:hover::before{
+    left: 100%;
+}
+.logo{
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    
+}
+.content a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    margin-left: 35px;
+    transition: .4s;
+    
+}
+
+.content a:hover{
+    color: rgb(88, 2, 2);
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 400px;
+    z-index: 999;
+    background-color:rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    border-left: 2px solid rgba(255, 255, 255, 0.2) ;
+    transform: translateX(100%);
+    transition: transform .4s ease-in-out;
+    display: flex;
+
+}
+
+.sidebar::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 300px;
+    width: 25%;
+    height: 100%;
+    background: linear-gradient(90deg,transparent,rgba(255, 255, 255, 0.877),transparent);
+    transition: .4s;
+    opacity: 0%;
+    
+    
+}
+
+.sidebar:hover::before{
+    right: -100%;
+    opacity: 100%;
+}
+.contentsidebar a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    margin-left: 35px;
+    transition: .3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 10vh;
+    width: 250px;
+    
+    
+}
+
+.contentsidebar a:hover{
+    color: rgb(88, 2, 2);
+}
+.logosidebar{
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.menu{
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.menu:hover{
+    color: rgb(88, 2, 2);
+}
+.close-butn{
+    align-self: flex-end;
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+    padding-right: 20px;
+    padding-top: 10px;
+    
+}
+.close-butn:hover{
+    color: rgb(88, 2, 2);
+}
+
+#toggle:checked ~ .sidebar{
+    
+    transform: translateX(0);
+}
+#toggle:checked ~ .navbar{
+    transform: translateY(-100%);
+}
+.cards{
+    min-height: 400px;
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+}
+.card{
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color:rgba(255, 255, 255,.1);
+    border: 2px solid rgba(255, 255, 255,.2) ;
+    height: 350px;
+    width: 350px;
+    justify-self: center;
+    backdrop-filter: blur(10px);
+    font-weight: 600;
+    border-radius: 15px;    
+    z-index: 3;
+    
+}
+.card img{
+    width: 40px;
+    height: 20px;
+    
+}
+
+@media (max-width: 950px) {
+    .content a{
+        display: none;
+    }
+    
+}
+@media (min-width: 951px) {
+    .menu{
+        display: none;
+    }
+    
+    
+}
+.logos{
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+.food{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 15px;
+    display: hidden;
+    opacity: 0;
+    transition: opacity .7s ease ;
+    z-index: 1;
+}
+
+.blur{
+    height: 350px;
+    width: 350px;
+    position: relative;
+    border-radius: 15px;
+    
+    
+}
+.blur:hover .food{
+    display:block;
+    z-index: 2;
+    opacity: 1;
+}
+
+
+
