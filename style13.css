@@ -219,6 +219,12 @@ body{
     z-index: 2;
     opacity: 1;
 }
+.blur:hover .card h3{
+    opacity: 0;
+}
+.blur:hover .card img{
+    opacity: 0;
+}
 
 @media (min-width: 340px) {
     .navbar{
