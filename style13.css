@@ -22,6 +22,7 @@ body{
     top: 0;
     left: 0;
     width: 100%;
+    height: 6vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -72,7 +73,7 @@ body{
     top: 0;
     right: 0;
     height: 100vh;
-    width: 400px;
+    width: 70vw;
     z-index: 999;
     background-color:rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
@@ -81,27 +82,10 @@ body{
     transform: translateX(100%);
     transition: transform .4s ease-in-out;
     display: flex;
-
-}
-
-.sidebar::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 300px;
-    width: 25%;
-    height: 100%;
-    background: linear-gradient(90deg,transparent,rgba(255, 255, 255, 0.877),transparent);
-    transition: .4s;
-    opacity: 0%;
     
-    
+
 }
 
-.sidebar:hover::before{
-    right: -100%;
-    opacity: 100%;
-}
 .contentsidebar a {
     color: white;
     font-size: 20px;
@@ -186,8 +170,8 @@ body{
     
 }
 .card img{
-    width: 40px;
-    height: 20px;
+    width: 60px;
+    height: 40px;
     
 }
 
@@ -236,5 +220,10 @@ body{
     opacity: 1;
 }
 
-
+@media (min-width: 340px) {
+    .navbar{
+        padding-left: 10px;
+        padding-right: 30px;
+    }
+}
 
