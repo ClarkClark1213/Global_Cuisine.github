@@ -5,7 +5,7 @@
     font-family:'Poppins',sans-serif;
 }
 body{
-    background-image: url("media/backround.jpg");
+    background-image: url("backround.jpg");
     background-color: brown;
     background-size: cover;
     background-repeat: no-repeat;
