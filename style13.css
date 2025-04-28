@@ -234,3 +234,9 @@ body{
     }
 }
 
+.card h2{
+    position: absolute;
+    top: 10%;
+    font-size:48px;
+}
+
