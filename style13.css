@@ -5,22 +5,27 @@ h1:hover{
     text-shadow: 2px 2px yellowgreen;
 }
 *{
-    margin: 0%;
-    padding: 0%;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family:'Poppins',sans-serif;
     cursor: url("cursor.cur"), auto;
+    max-width: 100%;
+    height: auto;
+    
 }
+    
 body{
-    background: rgb(94, 0, 0);
+    background: linear-gradient(darkred,darkblue,darkgreen);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    min-height: 100vh;
+    min-height: 100%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     margin: 0%;
+    max-width: 100%;
 }
 h1{
     font-family: "Griffy", system-ui;
@@ -30,8 +35,8 @@ h1{
 .navbar{    
     position: fixed;
     top: 0;
-    width: 100%;
-    height: 10vh;
+    width: 100vw;
+    height: 10%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -46,16 +51,16 @@ h1{
 }
 
 .logo{
-    color: white;
+    color: green;
     font-size: 25px;
     text-decoration: none;
     font-family: "Griffy", system-ui;
-    font-weight: 400;
+    font-weight: 700;
     font-style: normal;
     
 }
 .logo:hover{
-    text-shadow: 2px 2px 3px white;
+    text-shadow: 2px 2px 3px yellowgreen;
 }
 
 .content a {
@@ -192,10 +197,10 @@ h1{
     
 }
 .blur{
-
+    width: 100%;
     background-color: rgb(88, 2, 2);
     height: 350px;
-    width: 350px;
+    max-width: 350px;
     position: relative;
     border-radius: 15px;
     z-index: 10; 
@@ -214,7 +219,7 @@ h1{
     content: '';
     height: 100%;
     width: 100%;
-    background: linear-gradient(var(--angle), transparent 10%,red,rgb(165, 0, 0));
+    background: linear-gradient(var(--angle), transparent 10%,darkred,darkblue,darkgreen);
     z-index: -3;
     top: 0;
     left: 0;
@@ -480,3 +485,59 @@ h1{
     transform: scale(95%);
 }
 
+.container{
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.158);
+    backdrop-filter: blur(1px);
+    width: 100%;
+    height: auto; 
+    margin-top: 150px;
+}
+.container iframe{
+    max-width: 500px;
+    width: 90%;
+    height: 400px;
+    border: green solid 3px ;
+    border-radius: 8px;
+    box-shadow: 0 0 10px 10px darkred;
+}
+.container h1{
+    font-size: xxx-large;
+}
+.container p {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: white;
+}
+.container b{
+    color: rgb(180, 0, 0);
+    font-size: xx-large;
+}
+.container h2{
+    color: white;
+    font-size: 600;
+    text-shadow: 1px 1px 10px black;
+
+}
+.container strong{
+    color: red;
+}
+.recipe{
+    padding-top: 20px;
+}
+.tips{
+    color: white;
+    background-color: rgba(139, 0, 0, 0.349);
+    border: green solid 2px;
+    padding: 10px;
+    border-radius: 20px;
+    margin: 10px;
+
+}
+.tips b{
+    color: darkblue;
+}
