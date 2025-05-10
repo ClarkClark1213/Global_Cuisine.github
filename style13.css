@@ -381,6 +381,7 @@ h1{
     margin-right: 10px;
     transition: .3s;
     z-index: 10;
+   overflow: scroll;
 }
 .country a{
     color: white;
